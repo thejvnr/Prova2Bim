@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ControllerCarroFXML">
+   <children>
+      <AnchorPane layoutX="7.0" prefHeight="206.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="94.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Carros" />
+            <Text fx:id="id" layoutX="94.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="69.13671875" />
+            <Text layoutX="46.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+            <Text layoutX="31.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:" />
+            <Text layoutX="31.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renavam:" />
+            <TextField fx:id="tfNome" layoutX="89.0" layoutY="38.0" />
+            <TextField fx:id="tfDescricao" layoutX="89.0" layoutY="68.0" />
+            <TextField fx:id="tfRenavam" layoutX="89.0" layoutY="98.0" />
+            <Button layoutX="33.0" layoutY="134.0" mnemonicParsing="false" onAction="#inserir" text="Inserir" />
+            <Button layoutX="219.0" layoutY="134.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
+            <Button layoutX="94.0" layoutY="134.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+            <Button layoutX="155.0" layoutY="134.0" mnemonicParsing="false" onAction="#alterar" text="Alterar" />
+         </children>
+      </AnchorPane>
+		<TableView fx:id="tblCarro" editable="true" layoutX="7.0" layoutY="164.0" prefHeight="200.0" prefWidth="421.0">
+			<columns>
+				<TableColumn fx:id="colNome" prefWidth="148.0" text="Nome" />
+				<TableColumn fx:id="colDescr" prefWidth="131.0" text="Descricao" />
+				<TableColumn fx:id="colRenavam" minWidth="0.0" prefWidth="141.0" text="Renavam" />
+			</columns>
+	</TableView>
+      <TextField fx:id="tfTipo" layoutX="89.0" layoutY="399.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="tfQuantidade" layoutX="89.0" layoutY="433.0" />
+      <Text layoutX="46.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo:" />
+      <Text layoutX="14.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade:" />
+      <Text layoutX="111.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Multa" />
+      <Button layoutX="248.0" layoutY="399.0" mnemonicParsing="false" onAction="#inserirMulta" text="Inserir" />
+      <Button layoutX="247.0" layoutY="433.0" mnemonicParsing="false" onAction="#excluirMulta" text="Excluir" />
+      <Button layoutX="247.0" layoutY="466.0" mnemonicParsing="false" onAction="#pesquisarMulta" text="Pesquisar" />
+      <TableView fx:id="tblMultas" layoutX="13.0" layoutY="506.0" prefHeight="200.0" prefWidth="216.0">
+        <columns>
+          <TableColumn fx:id="colTipo" prefWidth="122.0" text="Tipo" />
+          <TableColumn fx:id="colQuantidade" prefWidth="93.0" text="Quantidade" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
